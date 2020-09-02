@@ -17,7 +17,7 @@ public class RestaurantApp {
 		System.out.println("\n======================= Fase 2 =======================\n");
 		
 		UtilsFase2 utilsFase2 = new UtilsFase2();
-		utilsFase2.addPrecioPlato(utilsFase1.getMenuArray(), utilsFase1.getPrecioPlatoArray());
+		utilsFase2.getPrecioPlato(utilsFase1.getMenuArray(), utilsFase1.getPrecioPlatoArray());
 		System.out.println(utilsFase2.toString());
 		
 		utilsFase2.printMenu();
@@ -41,8 +41,8 @@ public class RestaurantApp {
 
 		System.out.println("\n======================= Fase 3 =======================\n");
 		
-		UtilsFase3 utilsFase3 = new UtilsFase3(utilsFase2.getPedidoComidaList());
-		utilsFase3.printTicket(utilsFase2.getPrecioMenuHashMap(), utilsFase3.getPedidoComida(), utilsFase1);
+		UtilsFase3 utilsFase3 = new UtilsFase3(utilsFase1, utilsFase2.getPedidoComidaList());
+		utilsFase3.printTicket(utilsFase2.getPrecioMenuHashMap(), utilsFase3.getPedidoComida(), utilsFase3.getUtilsFase1());
 		
 	}
 

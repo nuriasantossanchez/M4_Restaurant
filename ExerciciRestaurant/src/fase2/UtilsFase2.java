@@ -28,7 +28,7 @@ public class UtilsFase2 {
 		this.pedidoComidaList = pedidoComidaList;
 	}
 
-	public void addPrecioPlato(String[] menu, double precioPlato[]) {
+	public void getPrecioPlato(String[] menu, double precioPlato[]) {
 		
 		for (int i = 0; i < precioPlato.length; i++) {
 			this.getPrecioMenuHashMap().put(menu[i], precioPlato[i]);

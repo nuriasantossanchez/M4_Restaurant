@@ -9,9 +9,19 @@ public class UtilsFase3 {
 
 	private ArrayList<String> pedidoFueraDeMenu = new ArrayList<String>();
 	private ArrayList<String> pedidoComida = new ArrayList<String>();
+	private UtilsFase1 utilsFase1;
 
-	public UtilsFase3(ArrayList<String> pedidoComida) {
+	public UtilsFase3(UtilsFase1 utilsFase1, ArrayList<String> pedidoComida) {
 		this.pedidoComida = pedidoComida;
+		this.utilsFase1=utilsFase1;
+	}
+
+	public UtilsFase1 getUtilsFase1() {
+		return utilsFase1;
+	}
+
+	public void setUtilsFase1(UtilsFase1 utilsFase1) {
+		this.utilsFase1 = utilsFase1;
 	}
 
 	public ArrayList<String> getPedidoFueraDeMenu() {
