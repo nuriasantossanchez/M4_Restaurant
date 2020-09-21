@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import fase1.UtilsFase1;
-import fase2.UtilsFase2;
-import fase3.UtilsFase3;
+import fase.dos.UtilsFaseDos;
+import fase.tres.UtilsFaseTres;
+import fase.uno.UtilsFaseUno;
 
 public class RestaurantApp {
 
@@ -11,12 +11,12 @@ public class RestaurantApp {
 		
 		System.out.println("\n======================= Fase 1 =======================\n");
 		
-		UtilsFase1 utilsFase1 = new UtilsFase1();
+		UtilsFaseUno utilsFase1 = new UtilsFaseUno();
 		System.out.println(utilsFase1.toString());
 		
 		System.out.println("\n======================= Fase 2 =======================\n");
 		
-		UtilsFase2 utilsFase2 = new UtilsFase2();
+		UtilsFaseDos utilsFase2 = new UtilsFaseDos();
 		utilsFase2.getPrecioPlato(utilsFase1.getMenuArray(), utilsFase1.getPrecioPlatoArray());
 		System.out.println(utilsFase2.toString());
 		
@@ -41,7 +41,7 @@ public class RestaurantApp {
 
 		System.out.println("\n======================= Fase 3 =======================\n");
 		
-		UtilsFase3 utilsFase3 = new UtilsFase3(utilsFase1, utilsFase2.getPedidoComidaList());
+		UtilsFaseTres utilsFase3 = new UtilsFaseTres(utilsFase1, utilsFase2.getPedidoComidaList());
 		utilsFase3.printTicket(utilsFase2.getPrecioMenuHashMap(), utilsFase3.getPedidoComida(), utilsFase3.getUtilsFase1());
 		
 	}
@@ -57,7 +57,7 @@ public class RestaurantApp {
 
 			if (plato.trim().isEmpty()) {
 				throw new EntradaDeDatosEnBlancoException(
-						"Entrada de datos por consola son blancos o es un salto de línea");
+						"Entrada de datos por consola son blancos o es un salto de lï¿½nea");
 			} else {
 				pedido.add(plato);
 

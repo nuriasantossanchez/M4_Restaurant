@@ -1,15 +1,15 @@
-package fase2;
+package fase.dos;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class UtilsFase2 {
+public class UtilsFaseDos {
 
 	private Map<String, Double> precioMenuHashMap = new LinkedHashMap<String, Double>();
 	private ArrayList<String> pedidoComidaList = new ArrayList<String>();
 
-	public UtilsFase2() {
+	public UtilsFaseDos() {
 	}
 
 	public Map<String, Double> getPrecioMenuHashMap() {
@@ -44,7 +44,7 @@ public class UtilsFase2 {
 			String plato = entrada.getKey();
 			Double precio = entrada.getValue();
 
-			System.out.println(plato + " -> " + String.format("%.2f", precio) + " €");
+			System.out.println(plato + " -> " + String.format("%.2f", precio) + " euros");
 
 		}
 		System.out.println("------------------------------------");
